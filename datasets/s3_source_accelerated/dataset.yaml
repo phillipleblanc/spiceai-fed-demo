@@ -1,0 +1,12 @@
+from: s3://phillip-parquet/beacon_attestations_06142200_06142209.parquet
+name: s3_source_accelerated
+params:
+  #endpoint: http://phillip-parquet.s3.amazonaws.com
+  region: "ap-northeast-2"
+
+acceleration:
+  enabled: true
+  refresh_mode: full
+  refresh_interval: 1h
+  engine: sqlite
+  mode: file

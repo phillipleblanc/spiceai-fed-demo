@@ -1,0 +1,6 @@
+from: s3://phillip-parquet/beacon_attestations_06142200_06142209.parquet
+name: s3_source
+params:
+  #endpoint: http://phillip-parquet.s3.amazonaws.com
+  region: "ap-northeast-2"
+
