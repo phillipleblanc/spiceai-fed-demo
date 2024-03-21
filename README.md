@@ -57,3 +57,7 @@ sql> select * from spiceai_source_accelerated
 ```
 
 5. Walk through the yaml definition for each dataset and explain how it works
+
+So that was a quick overview of using spiceai to perform federated SQL queries across multiple data sources. It provides tools for accelerating those queries by keeping a local copy up-to-date automatically, and it abstracts away the implementation details of querying across each data source.
+
+If this looks interesting, head over to our GitHub repo to download and try it out for yourself.
