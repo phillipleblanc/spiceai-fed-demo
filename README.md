@@ -3,6 +3,8 @@ A demo showcasing the federated SQL and acceleration capabilities of spiceai.
 
 ## Demo
 
+### Pre-reqs
+
 0. Download and install the Spice.ai CLI
 
 ```bash
@@ -26,6 +28,14 @@ spice s3 login --access-key <access-key> --access-secret <secret-key>
 spice postgres login --host <host> --port <port> --username <username> --password <password> --database <database>
 ```
 
+### Running the demo
+
+Spice.ai is a unified SQL query interface and portable runtime to locally accelerate, and query data sourced from any database, data warehouse, or data lake.
+
+Spice.ai natively uses Arrow for all operations - so it's fast, and applications can take advantage of a unified data model across all data sources. So instead of having to deal with provider specific formats, you have a single query interface that returns all data in Arrow, which a wide variety of tools can leverage without any serialization costs.
+
+I've got a repo here pre-configured with a few data sources I want my apps to be able to use. First I'll start the runtime:
+
 3. Start the Spice.ai runtime
 
 ```bash
@@ -33,8 +43,6 @@ spice run
 ```
 
 Now I have a running service that provides a unified SQL interface to my data sources. I also centralize storing the secrets needed to access my data sources, so my application becomes simpler. It also provides a natural connection pooler for backend DBs like Postgres.
-
-Spice.ai natively uses Arrow for all operations - so it's fast, and applications can take advantage of a unified data model across all data sources. Query parquet files in S3, Postgres tables, and get all data in Arrow.
 
 4. Show queries in `spice sql`
 
