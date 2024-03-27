@@ -7,5 +7,5 @@ acceleration:
   enabled: true
   refresh_mode: full
   refresh_interval: 1h
-  engine: sqlite # duckdb, arrow
+  engine: sqlite # duckdb, arrow, postgres
   mode: file # memory

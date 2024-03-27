@@ -32,9 +32,9 @@ spice postgres login --host <host> --port <port> --username <username> --passwor
 
 Spice.ai is a unified SQL query interface and portable runtime to locally accelerate, and query data sourced from any database, data warehouse, or data lake.
 
-Spice.ai natively uses Arrow for all operations - so it's fast, and applications can take advantage of a unified data model across all data sources. So instead of having to deal with provider specific formats, you have a single query interface that returns all data in Arrow, which a wide variety of tools can leverage without any serialization costs.
+Spice.ai natively uses Arrow - so it's fast, and your applications can take advantage of a unified data model for query results across any data source.
 
-I've got a repo here pre-configured with a few data sources I want my apps to be able to use. First I'll start the runtime:
+I've already got a repo here pre-configured with a few data sources I want my apps to be able to use. First I'll start the runtime:
 
 3. Start the Spice.ai runtime
 
@@ -61,3 +61,7 @@ sql> select * from spiceai_source_accelerated
 So that was a quick overview of using spiceai to perform federated SQL queries across multiple data sources. It provides tools for accelerating those queries by keeping a local copy up-to-date automatically, and it abstracts away the implementation details of querying across each data source.
 
 If this looks interesting, head over to our GitHub repo to download and try it out for yourself.
+
+## Notes
+
+Add a cross-join query to show joining across data sources
